@@ -1,0 +1,6 @@
+/* 전체 스타일 */
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; color: #111; }
+button { cursor: pointer; border: 1px solid #ddd; background: #fafafa; }
+button:hover { background: #f2f2f2; }
+input, button { font: inherit; }
