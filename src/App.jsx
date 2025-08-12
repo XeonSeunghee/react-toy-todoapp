@@ -13,20 +13,20 @@ export default function App() {
       alert("할일을 입력하세요.");
       return;
     }
-    setTodos((prev)=>[...prev,{id:crypto.randomUUID, text: value, done:false}]);
+    setTodos((prev)=>[...prev,{ id : crypto.randomUUID(), text: value, done:false}]);
     setText(""); // 현재 행 초기화
   }
 
   // 완료 체크 토글
   const toggle = (id) => 
     setTodos((prev)=>{
-      return prev.map(todo => todo.id === id ? {...todo, done: !todo.done} : todo)
+      return prev.map((todo) => todo.id === id ? {...todo, done: !todo.done} : todo)
     })
   
   // 삭제 체크 토글
   const remove = (id) => 
     setTodos((prev)=>{
-      return prev.filter(todo => todo.id !== id)
+      return prev.filter((todo) => todo.id !== id)
     })
   
   return (
